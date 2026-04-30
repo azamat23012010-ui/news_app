@@ -77,12 +77,16 @@ class DetailScreen extends StatelessWidget {
                       backgroundImage: AssetImage('assets/images/profile.jpg'),
                     ),
                     SizedBox(width: 10),
-                    Text(
-                      'By ${model.author ?? 'Unknown'}',
-                      style: GoogleFonts.workSans(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13,
-                        color: AppColors.greyText,
+                    Expanded(
+                      child: Text(
+                        'By ${model.author ?? 'Unknown'}',
+                        style: GoogleFonts.workSans(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                          color: AppColors.greyText,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                     Spacer(),

@@ -1,11 +1,14 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:news_app/src/core/colors/app_colors.dart';
 import 'package:news_app/src/core/router/app_router.dart';
 import 'package:news_app/src/features/home/cubit/home_cubit.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init();
   runApp(
     MultiBlocProvider(
       providers: [BlocProvider(create: (context) => HomeCubit())],
@@ -41,7 +44,7 @@ class _NewsAppState extends State<NewsApp> {
     return MaterialApp(
       theme: ThemeData(scaffoldBackgroundColor: AppColors.white),
       onGenerateRoute: AppRouter.onGenarateRoute,
-      initialRoute: isConnected == true ? '/home' : '/no_internet',
+      initialRoute: GetStorage().read('email') == true ? '/main' : '/login',
     );
   }
 }
