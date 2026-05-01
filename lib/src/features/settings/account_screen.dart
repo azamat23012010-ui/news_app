@@ -20,7 +20,7 @@ class _AccountScreenState extends State<AccountScreen> {
         backgroundColor: AppColors.white,
         title: Text(
           "Account",
-          style: GoogleFonts.acme(
+          style: GoogleFonts.workSans(
             color: AppColors.black,
             fontWeight: FontWeight.bold,
             fontSize: 24,
@@ -56,11 +56,7 @@ class _AccountScreenState extends State<AccountScreen> {
               ],
             ),
             SizedBox(height: 15),
-            Container(
-              width: double.infinity,
-              height: 2,
-              color: Colors.grey.shade300,
-            ),
+            Divider(color: Colors.grey.shade300),
             SizedBox(height: 15),
             InkWell(
               onTap: () {
@@ -75,13 +71,13 @@ class _AccountScreenState extends State<AccountScreen> {
                     style: GoogleFonts.workSans(
                       color: AppColors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                   Spacer(),
                   Icon(
                     Icons.arrow_forward_ios_outlined,
-                    size: 20,
+                    size: 18,
                     color: AppColors.grey2,
                   ),
                 ],

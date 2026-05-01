@@ -8,11 +8,14 @@ class NoFoundScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            LottieBuilder.asset('assets/lotties/404.json',width: 200,height: 160,)
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              LottieBuilder.asset('assets/lotties/404.json',width: 250,height: 200,)
+            ],
+          ),
         ),
       ),
     );

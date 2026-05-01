@@ -23,7 +23,6 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  final box = GetStorage();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: 'Sign In',
                   onPressed: () {
                     if (emailController.text.isNotEmpty) {
-                      box.write('email', emailController.text);
+                      GetStorage().write('email', emailController.text);
                       Navigator.pushNamedAndRemoveUntil(
                         context,
                         '/main',

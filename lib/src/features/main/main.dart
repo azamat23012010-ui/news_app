@@ -32,10 +32,10 @@ class _BottomBarState extends State<BottomBar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            _buildNavItem(CupertinoIcons.home, 0, ),
-            _buildNavItem(CupertinoIcons.search, 1, ),
-            _buildNavItem(CupertinoIcons.bookmark, 2, ),
-            _buildNavItem(CupertinoIcons.settings, 3, ),
+            _buildNavItem(Icons.home, 0, ),
+            _buildNavItem(Icons.search, 1, ),
+            _buildNavItem(Icons.bookmark, 2, ),
+            _buildNavItem(Icons.settings, 3, ),
           ],
         ),
       ),

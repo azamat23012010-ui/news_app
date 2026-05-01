@@ -35,6 +35,8 @@ class _NewsAppState extends State<NewsApp> {
     Connectivity().onConnectivityChanged.listen((result) {
       if (result.contains(ConnectivityResult.none)) {
         Navigator.pushNamed(_key.currentContext!, '/no_internet');
+      } else {
+        Navigator.pushNamedAndRemoveUntil(_key.currentContext!,'/main',(_) => false);
       }
     });
   }
@@ -45,7 +47,7 @@ class _NewsAppState extends State<NewsApp> {
       navigatorKey: _key,
       theme: ThemeData(scaffoldBackgroundColor: AppColors.white),
       onGenerateRoute: AppRouter.onGenarateRoute,
-      initialRoute: GetStorage().read('email') == true ? '/main' : '/login',
+      initialRoute: GetStorage().read('email') != null ? '/main' : '/login',
     );
   }
 }

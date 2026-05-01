@@ -25,6 +25,7 @@ class _InputWidgetState extends State<InputWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: GoogleFonts.workSans(),
       obscureText: widget.isPassword ? !isPasswordVisible : false,
       controller: widget.controller,
       cursorColor: AppColors.blueAccent,

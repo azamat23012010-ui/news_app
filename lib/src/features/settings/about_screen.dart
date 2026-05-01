@@ -17,8 +17,8 @@ class _AboutScreenState extends State<AboutScreen> {
         backgroundColor: AppColors.white,
       title: Text(
         "About",
-        style: GoogleFonts.acme(
-          color: Colors.black,
+        style: GoogleFonts.workSans(
+          color: AppColors.black,
           fontWeight: FontWeight.bold,
           fontSize: 22,
         ),
@@ -30,7 +30,7 @@ class _AboutScreenState extends State<AboutScreen> {
           icon: Icon(
             Icons.arrow_back_ios_new_outlined,
             size: 24,
-            color: Colors.black,
+            color: AppColors.black,
           ),
         ),
       ),
@@ -42,7 +42,7 @@ class _AboutScreenState extends State<AboutScreen> {
             children: [
               Text(
                 "Paragraph 1",
-                style: TextStyle(
+                style: GoogleFonts.workSans(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -53,14 +53,13 @@ class _AboutScreenState extends State<AboutScreen> {
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.workSans(
                   fontSize: 20,
-                  height: 1.5,
                   color: Colors.black87,
                 ),
               ),
               SizedBox(height: 10,),
               Text(
                 "Paragraph 2",
-                style: TextStyle(
+                style: GoogleFonts.workSans(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -71,7 +70,6 @@ class _AboutScreenState extends State<AboutScreen> {
                 textAlign: TextAlign.justify,
                 style: GoogleFonts.workSans(
                   fontSize: 20,
-                  height: 1.5,
                   color: Colors.black87,
                 ),
               ),

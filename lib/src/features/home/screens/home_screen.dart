@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
 
                 return Categories(
                   newindex: index,
-                  categories: ["apple", "tesla", "top"],
+                  categories: ["all", "tesla", "top","apple"],
                 );
               },
             ),

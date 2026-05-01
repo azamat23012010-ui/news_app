@@ -9,13 +9,16 @@ class NoInternetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            LottieBuilder.asset('assets/lotties/nointernet.json',width: 80,height: 80,),
-            SizedBox(height: 5),
-            Text('No Internet connection please check your mobile !',style: GoogleFonts.workSans(fontWeight: FontWeight.w600,fontSize: 14),)
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              LottieBuilder.asset('assets/lotties/nointernet.json',width: 80,height: 80,),
+              SizedBox(height: 5),
+              Text('No Internet connection please check your mobile !',style: GoogleFonts.workSans(fontWeight: FontWeight.w600,fontSize: 14),)
+            ],
+          ),
         ),
       ),
     );
