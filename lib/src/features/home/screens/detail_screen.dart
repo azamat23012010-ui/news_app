@@ -62,7 +62,7 @@ class DetailScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  model.title,
+                  model.title ?? 'no title',
                   style: GoogleFonts.workSans(
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
@@ -91,7 +91,7 @@ class DetailScreen extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      '${model.publishedAt.minute}m ago',
+                      '${model.publishedAt?.minute ?? 0}m ago',
                       style: GoogleFonts.workSans(
                         fontWeight: FontWeight.w500,
                         fontSize: 13,

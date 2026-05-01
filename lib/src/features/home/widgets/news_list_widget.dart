@@ -54,7 +54,7 @@ class NewsWidget extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                model.articles[index].title,
+                                model.articles[index].title ?? 'no title',
                                 maxLines: 4,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.workSans(
@@ -79,7 +79,7 @@ class NewsWidget extends StatelessWidget {
                                 children: [
                                   Flexible(
                                     child: Text(
-                                      model.articles[index].source.name,
+                                      model.articles[index].source?.name ?? 'unknown',
                                       style: GoogleFonts.workSans(
                                         fontWeight: FontWeight.w700,
                                         fontSize: 13,
@@ -96,7 +96,7 @@ class NewsWidget extends StatelessWidget {
                                   ),
                                   SizedBox(width: 5),
                                   Text(
-                                    '${model.articles[index].publishedAt.minute}m ago',
+                                    '${model.articles[index].publishedAt?.minute ?? 0}m ago',
                                     style: GoogleFonts.workSans(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 13,

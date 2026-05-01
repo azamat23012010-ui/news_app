@@ -5,8 +5,6 @@ import 'package:news_app/src/core/colors/app_colors.dart';
 import 'package:news_app/src/core/widgets/app_button_widget.dart';
 import 'package:news_app/src/core/widgets/input_widget.dart';
 
-
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -24,6 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
     passwordController.dispose();
     super.dispose();
   }
+
   final box = GetStorage();
   @override
   Widget build(BuildContext context) {
@@ -63,7 +62,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(
                       "Forgot Password?",
-                      style: GoogleFonts.workSans(color: AppColors.black, fontSize: 16),
+                      style: GoogleFonts.workSans(
+                        color: AppColors.black,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -71,12 +73,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 AppButton(
                   text: 'Sign In',
                   onPressed: () {
-                    box.write('email', emailController.text);
-                    Navigator.pushNamedAndRemoveUntil(context, '/main', (_) => false);
+                    if (emailController.text.isNotEmpty) {
+                      box.write('email', emailController.text);
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        '/main',
+                        (_) => false,
+                      );
+                    }
                   },
                 ),
                 SizedBox(height: 30),
-                Image.asset('assets/images/sign.png',height: 120,width: double.infinity,)
+                Image.asset(
+                  'assets/images/sign.png',
+                  height: 120,
+                  width: double.infinity,
+                ),
               ],
             ),
           ),

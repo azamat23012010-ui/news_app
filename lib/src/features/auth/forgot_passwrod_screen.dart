@@ -56,11 +56,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 AppButton(
                   text: 'Reset',
                   onPressed: () {
-                    Navigator.pushNamedAndRemoveUntil(
-                      context,
-                      '/forgot_password',
-                      (_) => false,
-                    );
+                    if (emailController.text.isNotEmpty) {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        '/forgot_password',
+                        (_) => false,
+                      );
+                    }
                   },
                 ),
               ],
