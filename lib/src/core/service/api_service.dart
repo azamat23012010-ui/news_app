@@ -6,7 +6,8 @@ import 'package:news_app/src/features/home/model/news_model.dart';
 
 class ApiService {
   static final Dio dio = Dio();
-  static const String apiKey = '6f73201186f94fad9a34e7206d6fccd3';
+  // API key is passed at build time — see README (env.json, not committed).
+  static const String apiKey = String.fromEnvironment('NEWS_API_KEY');
   static const String appleNewsUrl =
       'https://newsapi.org/v2/everything?q=apple&from=2026-04-28&to=2026-04-28&sortBy=popularity&apiKey=$apiKey';
   static const String teslaNewsUrl =

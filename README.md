@@ -64,10 +64,11 @@ lib/src/
 git clone https://github.com/azamat23012010-ui/news_app.git
 cd news_app
 flutter pub get
-flutter run
+cp env.example.json env.json   # then put your key inside env.json
+flutter run --dart-define-from-file=env.json
 ```
 
-> ℹ️ Get a free API key at [newsapi.org](https://newsapi.org) and set it in `lib/src/core/service/api_service.dart`.
+> 🔑 Get a free API key at [newsapi.org](https://newsapi.org). `env.json` is git-ignored, so your key never gets committed.
 
 ---
 
